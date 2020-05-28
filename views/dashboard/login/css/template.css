@@ -1,0 +1,277 @@
+html{
+    font-family: 'Lato', sans-serif;
+}
+*{box-sizing: border-box;}
+
+/*===========================
+    Main Content
+===========================*/
+div.main-content{
+    /*display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 30px auto 30px;
+    grid-template-areas: 
+    'sidenav header'
+    'sidenav main'
+    'sidenav footer';
+    height: 100%;*/
+    display: grid;
+    grid-template-columns: 300px auto;
+    height: 100%;
+}
+
+div.container-main{
+    grid-column: 2;
+    grid-template-rows: 50px auto;
+    display: grid;
+    position: fixed;
+    top:0;
+    height: 100%;
+    width: 100%;
+    left:300px;
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+}
+
+/*============================
+    Header
+============================*/
+.header{
+    /*grid-area: header;*/
+    grid-row: 1;
+    background-color: #34495e;
+    color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    text-transform: capitalize;
+    
+}
+.header-left{
+    grid-column: 1;
+}
+.header-right{
+    grid-column: 2;
+    padding: 10px;
+}
+p#txtUser{
+    position: fixed;
+    right: 0;
+    margin-right: 20px;
+}
+
+/*============================
+    Sidenav
+============================*/
+.sidenav-container{
+    /*grid-area: sidenav;*/
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: 150px 300px auto;
+    /*box-shadow: 3px 1px 6px  rgba(0,0,0,0.1);*/
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: fixed;
+    left:0;
+    overflow: hidden;
+    height: 100%;
+    width:300px;
+    top:0;
+}
+.sidenav-header{
+    background-color: #222f3e;
+}
+img#logo-header{
+    margin-top: 50px;
+    max-width: 80%;
+}
+.sidenav-content{
+    background-color: #4b6584;
+    border-bottom: 1px solid #7f8fa6;
+}
+.sidenav-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidenav-list-item{
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidenav-list-item a{
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    text-align: left;
+    display: block;
+    padding: 12px 15px 12px 15px;
+}
+.sidenav-list-item a:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.2s;
+    color:white;
+    text-decoration: none;
+}
+.sidenav-dropdown{
+    display: none;
+    padding: 0;
+    background-color: #6a8cb6;
+}
+
+/*li#dropdown-kuesioner:hover .sidenav-dropdown{
+    display: block;
+    padding: 0;
+}
+li#dropdown-pengguna:hover .sidenav-dropdown{
+    display: block;
+    padding: 0;
+}
+li#dropdown-admin:hover .sidenav-dropdown{
+    display: block;
+    padding: 0;
+}*/
+.aktif{
+    background-color:#1f3241;
+}
+      
+.sidenav-footer{
+    /*border-top: 1px solid #7f8fa6;*/
+    background-color: #4b6584;
+}
+
+/*============================
+    Main frame
+============================*/
+.main-box{
+    background: #f1f2f6;
+    /* overflow-y: scroll; */
+}
+
+.padding-content{
+    padding: 20px;
+}
+
+.pd-content{
+    padding:20px 70px 20px 70px;
+}
+
+.main-canvas{
+    background: #fff;
+    width: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 650px;
+    /* position: relative;
+    z-index: 0; */
+}
+.content-top-inline{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.inline-left{
+    grid-column: 1;
+    float: left;
+}
+.inline-right{
+    grid-column: 2;
+    float: right;
+}
+.clear{
+    clear: both;
+}
+
+
+/*============================
+    Footer
+============================*/
+.footer{
+    /*grid-area: footer;*/
+    background-color: #34495e;
+    color:white;
+    grid-row: 3;
+}
+
+
+/*==========================
+    HOME
+========================*/
+div.container-homepage-index {
+    background: #dcdde1;
+    width: 100%;
+    height: 100%;
+    padding-top: 1px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 100%;
+}
+
+.main-homepage-index {
+    grid-column: 2;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-rows: 50px auto;
+    padding-top: 50px;
+}
+
+div.header-home-index {
+    grid-row: 1;
+    width: 100%;
+    color: #222f3e;
+    padding-top: 1px;
+}
+
+div.body-home-index {
+    color: #222f3e;
+    grid-row: 2;
+    padding-top: 20px;
+}
+
+#logo-beranda-index {
+    max-width: 25%;
+    height: auto;
+}
+
+/*===========================
+
+    Scroll Table
+===========================*/
+/* 
+.tr{
+    width: 100%;
+}
+
+thead, tbody{
+    display: block;
+}
+
+tbody{
+    height: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+} */
+
+tr.tr-sticky{
+    position: sticky;
+    top:0px;
+    z-index:1;
+}
+
+
+/*===========================
+
+Card Foto
+
+===========================*/
+img#foto-card{
+    width: 64px;
+    height: 64px;
+}

@@ -1,0 +1,507 @@
+html{
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+    transition: 2s;
+}
+
+*{box-sizing: border-box;}
+
+/*======================================
+    Header
+======================================*/
+.box-header{
+    height: 14%;
+    width: 100%;
+}
+.logo{
+    max-width: 4%;
+    height: 80px;
+    position: absolute;
+    z-index: -1;
+    top:20px;
+    left:25px;
+}
+#judul-header-atas{
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    color: #222f3e;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    left:100px;
+    top: 30px;
+}
+#judul-header-bawah{
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    color: #222f3e;
+    position: absolute;
+    font-size: 20px;
+    left: 100px;
+    top:55px;
+}
+
+/*=================================
+    menu
+==================================*/
+.box-menu{
+    font-family: 'Lato', sans-serif;
+    background: #ffff;
+    height: 7%;
+    width: 100%;
+    position: sticky;
+    top:0px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    text-transform: capitalize;
+}
+.box-menu ul{ 
+    list-style-type: none;
+    margin:0px;
+    padding: 0px;
+}
+.box-menu > ul > li{float: left;}
+.box-menu li a,span{
+    display: inline-block;
+    text-align: left;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #7f8fa6;
+}
+.box-menu li a:hover,span:hover{
+    text-decoration: underline;
+    transition: 0.5s;
+    color: #222f3e;
+    font-weight: bold;
+}
+
+li.dropdown{
+    display: inline-block;
+}
+.isi-dropdown{
+    position: absolute;
+    text-align: left;
+    padding: 16px 20px;
+    display: none;
+    z-index: 1;
+    background-color: #ffff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/*.dropdown:hover .isi-dropdown{
+    display: block;
+}*/
+
+
+
+/*===============================================
+    isi konten
+===============================================*/
+.box-konten{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width:100%;
+}
+.home{
+    padding-top: 0px;
+    padding:0px;
+}
+/*.home img{
+    width:100%;
+}*/
+
+
+/*==============================================
+    Section
+==============================================*/
+section.home{
+    background-image: url(views/dashboard/login/img/homepage1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+    
+    
+}
+/*div.row-homepage{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    
+}
+
+.col-homepage-2{
+    grid-row: 2;
+    grid-column: 2;
+}*/
+div.container-homepage{
+    background: rgba(0,0,0,0.6);
+    width:100%; 
+    height: 100%;
+    padding-top: 1px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 100%;
+}
+.main-homepage{
+    grid-column: 2;
+    width:100%;
+    height: 500px;
+    display: grid;
+    grid-template-rows: 50px auto;
+    padding-top: 100px;
+}
+div.header-home{
+    grid-row: 1;
+    width: 100%;
+    color:white;
+    padding-top: 1px;
+}
+div.body-home{
+    color: white;
+    grid-row: 2;
+    padding-top: 20px;
+}
+
+#logo-beranda{
+    max-width: 25%;
+    height: auto;
+}
+.homeTxt{
+    font-weight: bold;
+}
+
+/*===============================
+    section login
+=================================*/
+
+#box-login{
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 530px;
+}
+
+div.grid-login{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 100%;
+    background: #401A66;
+    top: 109px;
+	position: relative;
+    
+}
+div.body-login{
+    grid-column: 2;
+}
+div.login{
+    width:400px;
+    position: relative;
+    top:30px;
+    height:472px;
+    background: black;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    
+}
+div.header-login{
+    color:white;
+    height: 15%;
+    background:  #487eb0; 
+    text-align: left;
+}
+div.main-login{
+    margin-top: 0px;
+    align-content: center;
+    display: flex;
+}
+
+.btn-login{
+    text-align: center;
+    text-transform: uppercase;
+    color:white;
+    width: 45%;
+    background-color: #0097e6;
+    font-size: 15px;
+    border: 1px solid #0097e6;
+    border-radius: 25px;
+    margin-top: 10px;
+    padding: 15px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2), 0 5px 1px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.txtLogin{
+    padding-left: 25px;
+    padding-top: 15px;
+}
+.txtMidLogin::before{
+    border-bottom: 1px solid #ffff;
+    content: '';
+    display: inline-block;
+    position: relative;
+    bottom: 4px;
+    width: 50px;
+    margin-right: 10px;
+}
+.txtMidLogin::after{
+    border-bottom: 1px solid #ffff;
+    content: '';
+    display: inline-block;
+    position: relative;
+    bottom: 4px;
+    width: 50px;
+    margin-left: 10px;
+}
+.txtMidLogin{
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    grid-column: 2;
+    text-align: center;
+}
+.mid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+#input-login{
+    margin-top: 10px;
+}
+.btnDaftar{
+    text-align: center;
+    text-transform: uppercase;
+    color:white;
+    width: 30%;
+    background-color: #2ed573;
+    font-size: 15px;
+    border: 1px solid #2ed573;
+    border-radius: 25px;
+    margin-top: 3px;
+    padding: 15px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2), 0 5px 1px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/*===============================
+    Section Pemerintahan
+=================================*/
+
+#box-pemerintahan{
+    background: #353b48;
+    width:100%;
+    height:750px;
+    padding-top: 1px;
+    color:white;
+}
+
+div.grid-pemerintahan{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100%;
+}
+div.col-visi{
+    grid-column: 1;
+    
+}
+.row-visi{
+    margin: 70px;
+}
+.row-misi{
+    margin: 70px;
+}
+div.col-misi{
+    grid-column: 2;
+}
+
+/*===============================
+    section Profil
+=================================*/
+
+#box-profil{
+    width:100%;
+    height:750px;
+    background:#f5f6fa;
+    padding-top: 1px;
+    color: black;
+}
+
+.struktur-box{
+    margin-top: 80px;
+}
+
+.pict-struktur-desa{
+    max-width: 100%;
+}
+.txtStruktur{
+    padding-left: 70px;
+}
+
+/*===============================
+    section About
+=================================*/
+
+#box-about{
+    width: 100%;
+    height: 750px;
+    color:white;
+    padding-top: 1px;
+    background: #487eb0;
+}
+.col-about{
+    padding-top: 60px;
+}
+.txtAbout{
+    padding-left: 70px;
+    text-align: left;
+}
+
+/*============================
+    section Contact
+============================*/
+/* #box-contact{
+    width: 100%;
+    height: 375px;
+    color:white;
+    padding-top: 1px;
+    background: #222f3e;
+}
+div.row-contact{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 100%;
+}
+div.col-contact{
+    width:100%;
+    padding-top: 30px;
+}
+div.col-contact-detail{
+    display: grid;
+    grid-template-columns: 1% auto;
+    margin-left: 76px;
+    margin-top: 20px;
+}
+div.alamat-header{
+    grid-row: 1;
+    grid-column: 1;
+}
+.alamat-content{
+    grid-row: 1;
+    grid-column: 2;
+}
+.telp-header{
+    grid-row: 2;
+    grid-column: 1;
+}
+.telp-content{
+    grid-row: 2;
+    grid-column: 2;
+}
+.email-header{
+    grid-row: 3;
+    grid-column: 1;
+}
+.email-content{
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.txtKontak{
+    text-align: left;
+    padding-left: 70px;
+} */
+
+/*================================
+    Box Daftar
+==================================*/
+div.section-daftar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left: 0;
+    /*background: #111;*/
+    background: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.daftar-container{
+    display: grid;
+    grid-template-rows: 130px auto;
+    width: 400px;
+    height: 690px;
+    background-color: #ffff;
+}
+.header-daftar{
+    grid-row: 1;
+}
+.main-daftar{
+    grid-row: 2;
+}
+.daftar-logo{
+    position: relative;
+    top:35px;
+    max-width: 80%;
+}
+.closeBtn{
+    position: absolute;
+    top:0;
+    font-size: 50px;
+    color:#ffff;
+    right: 400px;
+    cursor: pointer;
+}
+.input-text{
+    text-align: left;
+    border-radius: 10px;
+    width: 90%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+}
+
+.input-text:focus{
+    box-shadow: 0 0 5px rgb(179, 217, 255);
+    border: 3px solid rgb(179, 217, 255);
+}
+
+#input-daftar:focus{
+    box-shadow: 0 0 5px rgb(179, 217, 255);
+    border: 3px solid rgb(179, 217, 255);
+}
+button.btn-daftar{
+    text-align: center;
+    text-transform: uppercase;
+    color:white;
+    width: 60%;
+    background-color: #0097e6;
+    font-size: 15px;
+    border: 1px solid #0097e6;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 15px;
+    box-shadow: 2px 5px 10px 1px #888888;
+    cursor: pointer;
+}
+button.btn-cancel{
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    width:40%;
+    font-size: 15px;
+    background-color: #eb3b5a;
+    border: 1px solid #eb3b5a;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 2px 5px 10px 1px #888888;
+    cursor: pointer;
+}
+div.kel{
+    width: 350px;
+    text-align: left;
+    padding-bottom: 8px;
+}
